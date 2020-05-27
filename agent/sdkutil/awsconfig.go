@@ -50,6 +50,7 @@ func AwsConfig() (awsConfig *aws.Config) {
 		cfg := defaults.Config()
 		handlers := defaults.Handlers()
 		awsConfig.Credentials = defaults.CredChain(cfg, handlers)
+		return
 	}
 
 	// load managed credentials if applicable
